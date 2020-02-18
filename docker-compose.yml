@@ -8,5 +8,5 @@ services:
       - /usr/src/app/node_modules
     ports:
       - 3000:3000
-      - 9091:3000
+      - 9080:3000
     command: npm start

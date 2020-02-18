@@ -50,7 +50,7 @@ const Browse = () => {
         username,
         password
       })
-      .then(function(response) {
+      .then(function (response) {
         // setToken(response.data.access);
         const token = response.data.access;
 
@@ -104,7 +104,7 @@ const Browse = () => {
       <Content
         title="Lisimetro"
         subTitle="Dados dos sensores"
-        browserTitle="Lisimetro"
+        browserTitle={created_at}
       >
         <Row>
           <Col xs={4}>
@@ -236,10 +236,10 @@ const Browse = () => {
       </Content>
     </>
   ) : (
-    <>
-      <LoadingSpinner />
-    </>
-  );
+      <>
+        <LoadingSpinner />
+      </>
+    );
 };
 
 export default Browse;
