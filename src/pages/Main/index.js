@@ -9,8 +9,8 @@ class App extends Component {
   render() {
     return (
       <AdminLTE
-        title={["Dashboard"]}
-        titleShort={["Da"]}
+        title={["Lisimetro"]}
+        titleShort={["Lis"]}
         theme="green"
         sidebar={this.sidebar}
       >

@@ -9,6 +9,7 @@ import AdminLTE, {
   Button,
   LoadingSpinner
 } from "adminlte-2-react";
+import Moment from 'react-moment';
 // eslint-disable-next-line no-unused-vars
 // import { Container } from "./styles";
 // eslint-disable-next-line no-unused-vars
@@ -40,6 +41,10 @@ const Browse = () => {
   const [soil_humidity03, setSoil_humidity03] = useState("");
   const [lysimeter_weight, setLysimeter_weight] = useState("");
   const [sediment_weight, setSediment_weight] = useState("");
+
+  const date = new Date(); // This would be the timestamp you want to format
+  console.log('CREATED ', created_at)
+  //console.log('TIMESTAMP ', date)
 
   useEffect(() => {
     api
@@ -102,9 +107,9 @@ const Browse = () => {
   return landingPage ? (
     <>
       <Content
-        title="Lisimetro"
-        subTitle="Dados dos sensores"
-        browserTitle={created_at}
+        title="Última leitura: "
+        subTitle={<Moment format='DD/MM/YYYY, h:mm:ss a'>{created_at}</Moment>}
+        browserTitle="Lisimetro"
       >
         <Row>
           <Col xs={4}>
